@@ -76,7 +76,10 @@ public class OwnerNodeProperty extends NodeProperty<Node>
     
     public void setOwnershipDescription(OwnershipDescription descr) {
         ownership = descr;
-        getDescriptor().save();
+        Node node = getNode();
+        if (node != null) {
+            node.save();
+        }
     }
     
     @CheckForNull
