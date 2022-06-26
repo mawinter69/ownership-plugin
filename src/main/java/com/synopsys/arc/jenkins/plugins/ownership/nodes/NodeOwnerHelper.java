@@ -126,7 +126,6 @@ public class NodeOwnerHelper extends AbstractOwnershipHelper<Node> {
         } else {
             prop.setOwnershipDescription(descr);
         }
-        node.save();
     }
 
     @Override
